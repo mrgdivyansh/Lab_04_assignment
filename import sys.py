@@ -27,7 +27,7 @@ def main():
         Employee("161E90","Raman",41,56000),
         Employee("161F91","Raman",41,56000),
         Employee("161F99", "Jaya", 51, 82100),
-        Employee("171E20", "Tejas", 30, 55000)
+        Employee("171E20", "Tejas", 30, 55000),
         Employee("171G30", "Ajay", 45, 44000)]
     print("Choose a sorting parameter:")
     print("1. Age")
