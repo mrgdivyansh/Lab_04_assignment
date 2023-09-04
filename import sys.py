@@ -9,16 +9,16 @@ class Employee:
     def __repr__(self):
         return f"Employee(EId={self.EId},name={self.name}, age={self.age}, salary={self.salary})"
 
-def sort_by_age(employees):
+def age(employees):
     return sorted(employees, key=lambda x: x.age)
 
-def sort_by_name(employees):
+def name(employees):
     return sorted(employees, key=lambda x: x.name)
 
-def sort_by_salary(employees):
+def salary(employees):
     return sorted(employees, key=lambda x: x.salary)
 
-def print_employees(employees):
+def printemp(employees):
     for employee in employees:
         print(employee)
 
@@ -29,24 +29,29 @@ def main():
         Employee("161F99", "Jaya", 51, 82100),
         Employee("171E20", "Tejas", 30, 55000),
         Employee("171G30", "Ajay", 45, 44000)]
-    print("Choose a sorting parameter:")
-    print("1. Age")
-    print("2. Name")
-    print("3. Salary")
+    ch="y" 
+    while ch=="y" or ch=="Y":
+        print("Choose a sorting parameter:")
+        print("1. Age")
+        print("2. Name")
+        print("3. Salary")
 
-    choice = input()
+        choice = input()
 
-    if choice == "1":
-        employees = sort_by_age(employees)
-    elif choice == "2":
-        employees = sort_by_name(employees)
-    elif choice == "3":
-        employees = sort_by_salary(employees)
-    else:
-        print("Invalid choice")
-        sys.exit(1)
+        if choice == "1":
+            employees = age(employees)
+        elif choice == "2":
+            employees = name(employees)
+        elif choice == "3":
+            employees = salary(employees)
+        else:
+            print("Invalid choice")
+            sys.exit(1)
 
-    print_employees(employees)
+        printemp(employees)
+        print()
+        print()
+        ch=input("Continue(Y/N)?")
 
 if __name__ == "__main__":
     main()
